@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #6194d5;
+  justify-content: space-between;
+  overflow: auto;
+}
+ul li {
+  position: relative;
+  margin: 0 20px;
+  list-style: none;
+  display: inline-block;
+  padding: 14px;
+  font-size: 17px;
+}
+ul li a{
+text-decoration: none; 
+cursor: pointer;
+color: rgb(255, 255, 255);
+}
+ul li a:hover {
+   background-color: rgb(233, 14, 14);
+}
+.container img {
+  object-fit: contain;
+} 
+
+    </style>
+  </head>
+  <body>
+   
+      
+    <nav>
+       
+    <div class="container"><img src="images/finstergram.png" width="200px" height="50px" id=logo alt="Logo image"></div>
+      <ul class="navigationbar">
+        <li><a href="login">Login</a></li>
+        <li><a href="signup">Signup</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
