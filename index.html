@@ -11,7 +11,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #6194d5;
+  background-color: #90b9f7;
   justify-content: space-between;
   overflow: auto;
 }
@@ -26,27 +26,261 @@ ul li {
 ul li a{
 text-decoration: none; 
 cursor: pointer;
-color: rgb(255, 255, 255);
+color: rgb(248, 238, 238);
 }
 ul li a:hover {
-   background-color: rgb(233, 14, 14);
+   background-color: rgb(160, 43, 58);
 }
 .container img {
   object-fit: contain;
 } 
+.content {
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    }
+.profil {
+background-color: white;
+align-items: center;
+}
 
-    </style>
-  </head>
-  <body>
-   
-      
-    <nav>
-       
-    <div class="container"><img src="images/finstergram.png" width="200px" height="50px" id=logo alt="Logo image"></div>
-      <ul class="navigationbar">
-        <li><a href="login">Login</a></li>
-        <li><a href="signup">Signup</a></li>
-      </ul>
-    </nav>
-  </body>
+.profil-bild {
+display: flex;
+background-color:white;
+margin: 250px;
+justify-content: space-around;
+}
+
+.profil-bild-img {
+float:none; 
+align-self: flex-end;
+object-fit: contain;
+}
+
+.profil-info {
+background-color: red;
+}
+
+.profil-stats {
+background-color: aquamarine;
+}
+
+.profil-bio {
+text-align: justify;
+font-size: small;
+display: flex;
+padding: 50px;
+background-color:white;
+}
+
+table, th, td {
+    border: 0px solid black;
+}
+
+.button {
+  background-color: #bdc2c0;
+  border: none;
+  color: rgb(10, 1, 1);
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 15px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.center {
+  margin: auto;
+  width: 100%;
+  padding: 15px;
+}
+.item1 { 
+  grid-area: header; 
+  float: none;
+  width: 100%;
+  padding: 10px;
+  height: 100px; 
+  }
+
+.item2 { grid-area: menu; }
+.item3 { 
+grid-area: main; 
+text-align: justify;
+font-size: small;
+}
+
+.item4 { grid-area: footer; }
+
+.grid-container {
+
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  grid-template-areas:
+    'Menu header header header header header'
+    'Menu header header header header header'
+    'menu main main main main main'
+    'footer footer footer footer footer footer';
+  gap: 2px; /* Adjust the gap between grid items */
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-color: black;
+  border-width: 500px;
+  padding: 2px;
+  grid-auto-flow: column;
+  border: 1px solid #5c0404;
+}
+.grid-containerf {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  grid-template-areas:
+    'Menu header header header header header'
+    'Menu header header header header header'
+    'menu main main main main main'
+    'menu main main main main main'
+    'footer footer footer footer footer footer';
+  gap: 4px;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  border-color: black;
+  border-width: 500px;
+  padding: 5px;
+  grid-auto-flow: column;
+  border: 2px solid #13e748;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: right;
+  width: 25%;
+  padding: 100px;
+  border-color: black;
+  border-radius: 20px;
+  border-width: 150px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the column width as needed */
+      gap: 10px; /* Adjust the gap between images */
+      padding: 20px; /* Optional: Add padding to the grid container */
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    }
+
+/* First the Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* The Picture Frame */
+.gallery-frame {
+  padding: .5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #333;
+  color: #d9d9d9;
+}
+
+/* The Images */
+.gallery-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.gallery-img:hover {
+  opacity: .7;
+}
+
+a {
+      text-decoration: none; /* Remove underline by default */
+      color: #00060a; /* Set the default color for the link */
+      transition: color 0.3s; /* Add a smooth transition effect for color change */
+    }
+</style>
+</head>
+<body>
+<nav>
+ <div class="container"><a href="index.html"><img src="images/finstergram.png" width="200px" height="40px" id=logo alt="Logo image"></a></div>
+   <ul class="navigationbar">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Signup</a></li>
+   </ul>
+</nav>
+<div class="content">
+<div class="grid-container">
+  <div class="item1">Techstarter
+  <button class="button">Folgen</button>
+  <button class="button">Nachricten Senden</button>
+  <button class="button">...</button></div>
+ 
+  <div class="item2"><img class="profil-bild-img" src="images/tech.jpg"></div>
+  <div class="item3" style="text-align: justify; font-size: small;">
+    <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >53 Beitgräge</a>  &nbsp;
+    <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >2.693 Followers</a>  &nbsp; 
+    <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >25 Gefolgt</a> <br>
+    <br>
+    <h1 style="color: #5c0404; font-size: large; letter-spacing: 3px;">Techstarter</h1><br> Bildung <br>
+    ☁️ in 12 Monaten zum Cloud Spezialist<br>
+    🏠 100% online<br>
+    ✍🏼 Kursstart: 22.01.2024<br>
+    💻 Laptop inklusive<br>
+    Informiere dich jetzt ⤵<br>
+    Herzogspitalstr. 24, Munich, Germany 80331<br>
+    linktr.ee/techstarter
+  </div></div>
+  <div>BEITRÄGE
+    REELS
+    MARKIERT</div>
+  <div class="image-grid">
+    <img src="images/images.jpg" alt="Image 1">
+    <img src="images/images2.jpg" alt="Image 2">
+    <img src="images/images3.jpg" alt="Image 3">
+    <img src="images/images4.jpg" alt="Image 4">
+    <img src="images/images5.jpg" alt="Image 5">
+    <img src="images/images6.jpg" alt="Image 6">
+    <img src="images/images4.jpg" alt="Image 7">
+    <img src="images/images.jpg" alt="Image 8">
+    <img src="images/images2.jpg" alt="Image 9">
+    <img src="images/images3.jpg" alt="Image 10">
+    <img src="images/images5.jpg" alt="Image 11">
+    <img src="images/images4.jpg" alt="Image 12">
+    <!-- Add more images as needed -->
+  </div>
+</div>
+</body>
 </html>
