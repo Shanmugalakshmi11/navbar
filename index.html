@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <style>
-      * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #90b9f7;
-  justify-content: space-between;
-  overflow: auto;
-}
-ul li {
-  position: relative;
-  margin: 0 20px;
-  list-style: none;
-  display: inline-block;
-  padding: 14px;
-  font-size: 17px;
-}
-ul li a{
-text-decoration: none; 
-cursor: pointer;
-color: rgb(248, 238, 238);
-}
-ul li a:hover {
-   background-color: rgb(160, 43, 58);
-}
-.container img {
-  object-fit: contain;
-} 
-.content {
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Image and Text</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #navbar {
+      background-color: #67a3f1;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    #navbar img {
+      height: 40px; /* Adjust the height of the image as needed */
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s;
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #navbar #text-right {
+      text-align: right;
+    }
+
+    .content {
     justify-content: center;
     text-align: center;
     padding: 50px;
@@ -231,56 +236,59 @@ a {
       color: #00060a; /* Set the default color for the link */
       transition: color 0.3s; /* Add a smooth transition effect for color change */
     }
-</style>
+  </style>
 </head>
 <body>
-<nav>
- <div class="container"><a href="index.html"><img src="images/finstergram.png" width="200px" height="40px" id=logo alt="Logo image"></a></div>
-   <ul class="navigationbar">
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Signup</a></li>
-   </ul>
-</nav>
-<div class="content">
-<div class="grid-container">
-  <div class="item1">Techstarter
-  <button class="button">Folgen</button>
-  <button class="button">Nachricten Senden</button>
-  <button class="button">...</button></div>
- 
-  <div class="item2"><img class="profil-bild-img" src="images/tech.jpg"></div>
-  <div class="item3" style="text-align: justify; font-size: small;">
-    <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >53 Beitgräge</a>  &nbsp;
-    <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >2.693 Followers</a>  &nbsp; 
-    <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >25 Gefolgt</a> <br>
-    <br>
-    <h1 style="color: #5c0404; font-size: large; letter-spacing: 3px;">Techstarter</h1><br> Bildung <br>
-    ☁️ in 12 Monaten zum Cloud Spezialist<br>
-    🏠 100% online<br>
-    ✍🏼 Kursstart: 22.01.2024<br>
-    💻 Laptop inklusive<br>
-    Informiere dich jetzt ⤵<br>
-    Herzogspitalstr. 24, Munich, Germany 80331<br>
-    linktr.ee/techstarter
-  </div></div>
-  <div>BEITRÄGE
-    REELS
-    MARKIERT</div>
-  <div class="image-grid">
-    <img src="images/images.jpg" alt="Image 1">
-    <img src="images/images2.jpg" alt="Image 2">
-    <img src="images/images3.jpg" alt="Image 3">
-    <img src="images/images4.jpg" alt="Image 4">
-    <img src="images/images5.jpg" alt="Image 5">
-    <img src="images/images6.jpg" alt="Image 6">
-    <img src="images/images4.jpg" alt="Image 7">
-    <img src="images/images.jpg" alt="Image 8">
-    <img src="images/images2.jpg" alt="Image 9">
-    <img src="images/images3.jpg" alt="Image 10">
-    <img src="images/images5.jpg" alt="Image 11">
-    <img src="images/images4.jpg" alt="Image 12">
-    <!-- Add more images as needed -->
+
+<div id="navbar">
+    <a href="index.html"><img src="images/finstergram.png" alt="Logo"></a> 
+  <div id="text-right">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+    
   </div>
 </div>
+<div class="content">
+    <div class="grid-container">
+      <div class="item1">Techstarter
+      <button class="button">Folgen</button>
+      <button class="button">Nachricten Senden</button>
+      <button class="button">...</button></div>
+     
+      <div class="item2"><img class="profil-bild-img" src="images/tech.jpg"></div>
+      <div class="item3" style="text-align: justify; font-size: small;">
+        <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >53 Beitgräge</a>  &nbsp;
+        <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >2.693 Followers</a>  &nbsp; 
+        <a href="https://www.instagram.com/"  style="font-size: larger; font-style: normal;" >25 Gefolgt</a> <br>
+        <br>
+        <h1 style="color: #5c0404; font-size: large; letter-spacing: 3px;">Techstarter</h1><br> Bildung <br>
+        ☁️ in 12 Monaten zum Cloud Spezialist<br>
+        🏠 100% online<br>
+        ✍🏼 Kursstart: 22.01.2024<br>
+        💻 Laptop inklusive<br>
+        Informiere dich jetzt ⤵<br>
+        Herzogspitalstr. 24, Munich, Germany 80331<br>
+        linktr.ee/techstarter
+      </div></div>
+      <div>BEITRÄGE
+        REELS
+        MARKIERT</div>
+      <div class="image-grid">
+        <img src="images/images.jpg" alt="Image 1">
+        <img src="images/images2.jpg" alt="Image 2">
+        <img src="images/images3.jpg" alt="Image 3">
+        <img src="images/images4.jpg" alt="Image 4">
+        <img src="images/images5.jpg" alt="Image 5">
+        <img src="images/images6.jpg" alt="Image 6">
+        <img src="images/images4.jpg" alt="Image 7">
+        <img src="images/images.jpg" alt="Image 8">
+        <img src="images/images2.jpg" alt="Image 9">
+        <img src="images/images3.jpg" alt="Image 10">
+        <img src="images/images5.jpg" alt="Image 11">
+        <img src="images/images4.jpg" alt="Image 12">
+        <!-- Add more images as needed -->
+      </div>
+<!-- Your content goes here -->
+
 </body>
 </html>
